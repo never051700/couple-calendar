@@ -1,0 +1,63 @@
+{
+  "expo": {
+    "name": "우리 캘린더",
+    "slug": "couplecalander",
+    "version": "1.0.0",
+    "scheme": "couplecalander",
+    "orientation": "portrait",
+    "icon": "./assets/icon-ios.png",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#ffffff",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.couplecalander.app",
+      "icon": "./assets/icon-ios.png",
+      "backgroundColor": "#ffffff",
+      "config": {
+        "usesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.couplecalander.app",
+      "permissions": [
+        "SCHEDULE_EXACT_ALARM"
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon-ios.png",
+        "backgroundColor": "#3B82F6"
+      }
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon-android.png",
+          "color": "#3B82F6",
+          "defaultChannel": "default"
+        }
+      ],
+      "expo-asset",
+      "expo-font",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/icon-ios.png",
+          "imageWidth": 220,
+          "resizeMode": "contain",
+          "backgroundColor": "#3B82F6"
+        }
+      ],
+      "expo-status-bar",
+      [
+        "expo-secure-store",
+        {
+          "faceIDPermission": false
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": false
+    }
+  }
+}
